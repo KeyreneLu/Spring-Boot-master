@@ -23,7 +23,7 @@ public class WebConfiguration {
         registrationBean.addUrlPatterns("/*");
         registrationBean.setName("myFilter");
         registrationBean.setOrder(1);
-        registrationBean.addInitParameter("ppm","周梦婷");
+        registrationBean.addInitParameter("ppm","ZMT");
         return registrationBean;
     }
 
