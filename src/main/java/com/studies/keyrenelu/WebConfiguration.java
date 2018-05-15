@@ -6,8 +6,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
+/**
+ * 自定义过滤器
+ */
 @Configuration
 public class WebConfiguration {
 
@@ -36,7 +40,9 @@ public class WebConfiguration {
 
         @Override
         public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-
+            HttpServletRequest request = (HttpServletRequest) servletRequest;
+            System.out.println("this is my filter,url:"+request.getRequestURL());
+            filterChain.doFilter(servletRequest,servletResponse);
         }
 
         @Override
