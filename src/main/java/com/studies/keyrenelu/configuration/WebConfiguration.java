@@ -1,4 +1,4 @@
-package com.studies.keyrenelu;
+package com.studies.keyrenelu.configuration;
 
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
